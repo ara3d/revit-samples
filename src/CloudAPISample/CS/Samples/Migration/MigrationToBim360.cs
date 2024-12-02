@@ -226,7 +226,7 @@ namespace Ara3D.RevitSampleBrowser.CloudAPISample.CS.Samples.Migration
                 {
                     var doc = Application.Application.OpenDocumentFile(hostModelPath, ops,
                         new DefaultOpenFromCloudCallback());
-                    foreach (var linkInstance in doc.GetElements<RevitLinkType>()s)
+                    foreach (var linkInstance in doc.GetElements<RevitLinkType>())
                     {
                         if (mapModelsNameToGuid.TryGetValue(linkInstance.Name, out _))
                         {

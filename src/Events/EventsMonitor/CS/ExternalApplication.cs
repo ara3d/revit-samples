@@ -160,7 +160,7 @@ namespace Ara3D.RevitSampleBrowser.Events.EventsMonitor.CS
                 // playing journal.
                 if (m_journalProcessor.IsReplay)
                 {
-                    m_appEventsSelection = m_journalProcessor.EventsList;
+                    _appEventsSelection = m_journalProcessor.EventsList;
                 }
                 
                 // running the sample form UI.
@@ -174,7 +174,7 @@ namespace Ara3D.RevitSampleBrowser.Events.EventsMonitor.CS
 
 #if !(Debug || DEBUG)
                     // dump what user select to a file in order to autotesting.
-                    m_journalProcessor.DumpEventsListToFile(m_appEventsSelection);
+                    m_journalProcessor.DumpEventsListToFile(_appEventsSelection);
                 }
 #endif
 

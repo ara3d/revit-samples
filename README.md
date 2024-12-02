@@ -29,7 +29,7 @@ Currently any sample that requires an external file, is using the wrong path.
 
 ## How to Build and Compile 
 
-The project run a batch script after build that copies the add-in file, and the DLLs into the Revit 2024 add-ins directory.
+The project runs a batch script after build that copies the add-in file and the DLLs into the Revit 2024 add-ins directory.
 Just launching Revit 2024 afterwards should work. 
 
 ## How to Use
@@ -45,11 +45,11 @@ After launching the plug-in, select a sample to see the documentation, and doubl
 
 ## How to Contribute 
 
-If you have a suggested code fix or improvement please make a pull-request. 
-If you have comments or questions please file an issue. 
-If you find the tool useful, please tell others about it.
+- If you have a suggested code fix or improvement please make a [pull request](https://github.com/ara3d/revit-sample-browser/pulls). 
+- If you have comments or questions please file an issue. 
+- If you find the tool useful, please tell others about it.
 
 # Guidelines
 
-Remember, open-source software is a generous gift from people who work extremely had for very little reward. 
+Remember, open-source software is a generous gift from people who work extremely hard for very little reward. 
 Be patient, kind, and supportive!

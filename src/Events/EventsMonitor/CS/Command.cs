@@ -1,5 +1,6 @@
 // Copyright 2023. See https://github.com/ara3d/revit-sample-browser/LICENSE.txt
 
+using System.Collections.Generic;
 using System.Windows.Forms;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
@@ -32,7 +33,7 @@ namespace Ara3D.RevitSampleBrowser.Events.EventsMonitor.CS
             if (ExternalApplication.JnlProcessor.IsReplay)
             {
                 ExternalApplication.ApplicationEvents =
- ExternalApplication.JnlProcessor.GetEventsListFromJournalData(journaldata);
+ ExternalApplication.JnlProcessor.GetEventsListFromJournalData(commandData.JournalData);
 
             }
 
@@ -46,10 +47,11 @@ namespace Ara3D.RevitSampleBrowser.Events.EventsMonitor.CS
             {
                 // get what user select.
                 ExternalApplication.ApplicationEvents = ExternalApplication.SettingDialog.AppSelectionList;
+                IDictionary<string, string> journalData = commandData.JournalData;
 
 #if !(Debug || DEBUG)
                     // dump what user select to a file in order to autotesting.
-                    ExternalApplication.JnlProcessor.DumpEventListToJournalData(ExternalApplication.ApplicationEvents, ref journaldata);
+                    ExternalApplication.JnlProcessor.DumpEventListToJournalData(ExternalApplication.ApplicationEvents, ref journalData);
 #endif
             }
 #if !(Debug || DEBUG)
